@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8"> 
+      <title>Bars</title>
+    </head>
+        
+<style type="text/css"> 
+    #container {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+    
+ .card.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 435px;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+
+.card.icon:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.card.icon:after {
+  content: '';
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 4px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+
+
+
+.dog-head {
+  z-index: 100;
+  -webkit-animation: head-move 1s ease-in-out infinite;
+}
+
+div.dog-body {
+  height: 300px;
+  width: 225px;
+  margin-top: -175px;
+  margin-left: 40px;
+  background-image: url('http://www.clker.com/cliparts/T/0/9/J/e/4/dog-body-md.png');
+  background-repeat: no-repeat;
+}
+
+
+
+/*ANIMATIONS
+---------------------------------------------------------*/
+
+@-webkit-keyframes head-move {
+  50% { 
+    -webkit-transform: rotate(-1.5deg); 
+  }
+}
+    
+ 
+ span{height:40px; width:40px; display:block; position:relative;} 
+
+.demoSpan1:before{content:''; height:10px; width:16px; display:b; border:5px solid #333; border-bottom:none; border-radius:50px 50px 0 0;-webkit-border-radius:50px 50px 0 0;-moz-border-radius:50px 50px 0 0; position:absolute; top:0px; left:7px; }
+
+.demoSpan1:after{content:''; width:40px; height:25px; background:#333; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; position:absolute; top:15px; left:0;}
+
+#menu {
+	background: #0099CC;
+	color: #FFF;
+	height: 45px;
+	padding-left: 18px;
+	border-radius: 10px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #ECE0FF;
+	font-size: 17px;
+	text-transform: capitalize;
+}
+#menu a.dropdown-arrow:after {
+	content: "\2193";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #D9003A;
+	background: #F2418E;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+    
+    
+<span class="demoSpan1">
+</span>
+
+<img id="animation-demo" class="animated bounceOutUp" src="https://www.html-code-generator.com/images/HTMLpicture.png"> 
+
+
+#animation-demo {
+	width: 200px;
+	height: 150px;
+	position: relative;
+} 
+
+.animated {
+	-webkit-animation-duration: 9s;
+	animation-duration: 9s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes bounceOutUp { 
+    0% { 
+        -webkit-transform: translateY(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        -webkit-transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-200px); 
+    } 
+} 
+@keyframes bounceOutUp { 
+    0% { 
+        transform: translateY(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateY(-200px); 
+    } 
+} 
+.bounceOutUp { 
+    -webkit-animation-name: bounceOutUp; 
+    animation-name: bounceOutUp; 
+}
+    
+
+
+    
+</style>
+        
+
+    
+<body style="background-color: black;"> 
+    <div class="card icon"></div>
+    
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+  <a href="#"><i class="fa fa-envelope"></i></a> 
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a> 
+
+    <nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='http://'>Home</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Dog</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'> Clothes </a></li>
+        <li><a href='http://'> Shoes</a></li>
+        <li><a href='http://'> Coats</a></li>
+        <li><a href='http://'> Toys</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>Breeds</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Services</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>Doctors</a></li>
+        <li><a href='http://'>Trainers</a></li>
+        <li><a href='http://'>Contact Us</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>Donations</a></li>
+  </ul>
+</nav>
+    
+</div>
+   <div id=container>
+  <div class="dog-head">
+    <img src="http://www.clker.com/cliparts/j/3/Z/Y/D/5/dog-head-md.png">
+  </div>
+
+  <div class="dog-body">
+
+  </div>
+</div>
+    
+    
+    
+    </body>
+    
+</html>
